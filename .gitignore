@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+results/_raw/
+*.webm
+
+# Python
+*.py[cod]
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+.aws/
+*.pem
+*.key
+
+# Generated results and local logs
+*.log
+boot_err.txt
+boot_log.txt
+verify_err.txt
+
+# Windows
+Thumbs.db
+
+# Development scratch files
+bedrock-test.json
+converse-input.json
+
+# Generated output files
+cases_check.txt
+pre_impl_audit_out.txt
+validate_out.txt
+
+# Kiro IDE configuration
+.kiro/

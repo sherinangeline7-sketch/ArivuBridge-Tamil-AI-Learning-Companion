@@ -1,0 +1,158 @@
+{
+  "version": "1.0 — 2026-10-30",
+  "note": "Curated CS concept guidance for ArivuBridge. Every item is a short paraphrase of the cited source. The model may only cite IDs returned by lookup_guidance; it must not add facts not present here. Sources were read on the dates noted. Content was paraphrased for compliance with licensing restrictions.",
+  "sources": {
+    "W3S-SQL":   "W3Schools SQL Tutorial, W3Schools Online Web Tutorials, https://www.w3schools.com/sql/, accessed 2026-10-30",
+    "W3S-PY":    "W3Schools Python Tutorial, W3Schools Online Web Tutorials, https://www.w3schools.com/python/, accessed 2026-10-30",
+    "W3S-JAVA":  "W3Schools Java Tutorial, W3Schools Online Web Tutorials, https://www.w3schools.com/java/, accessed 2026-10-30",
+    "GFG-DBMS":  "DBMS Tutorial, GeeksforGeeks, https://www.geeksforgeeks.org/dbms/, accessed 2026-10-30",
+    "GFG-DSA":   "Data Structures and Algorithms, GeeksforGeeks, https://www.geeksforgeeks.org/data-structures/, accessed 2026-10-30",
+    "GFG-OS":    "Operating Systems Tutorial, GeeksforGeeks, https://www.geeksforgeeks.org/operating-systems/, accessed 2026-10-30",
+    "GFG-CN":    "Computer Networks Tutorial, GeeksforGeeks, https://www.geeksforgeeks.org/computer-network-tutorials/, accessed 2026-10-30",
+    "GFG-AI":    "Artificial Intelligence Tutorial, GeeksforGeeks, https://www.geeksforgeeks.org/artificial-intelligence/, accessed 2026-10-30",
+    "GFG-PY":    "Python Programming Language, GeeksforGeeks, https://www.geeksforgeeks.org/python-programming-language/, accessed 2026-10-30",
+    "GFG-JAVA":  "Java Programming Language, GeeksforGeeks, https://www.geeksforgeeks.org/java/, accessed 2026-10-30",
+    "MDN-HTTP":  "HTTP Overview, MDN Web Docs, Mozilla, https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview, accessed 2026-10-30",
+    "PY-DOCS":   "The Python Tutorial, Python Software Foundation, https://docs.python.org/3/tutorial/, accessed 2026-10-30",
+    "ORACLE-JT": "The Java Tutorials, Oracle Corporation, https://docs.oracle.com/javase/tutorial/, accessed 2026-10-30",
+    "STRANDS":   "Strands Agents SDK Documentation, AWS, https://strandsagents.com/latest/documentation/docs/, accessed 2026-10-30"
+  },
+  "items": [
+
+    {"id": "DBMS-001", "subject": "dbms", "topic": "database", "source": "GFG-DBMS",
+     "text": "A Database Management System (DBMS) is software that stores, retrieves and manages data in a structured way. It acts as an interface between the user and the database, ensuring data is consistent and secure. Examples include MySQL, Oracle and PostgreSQL. Tamil: தரவுத்தள மேலாண்மை மென்பொருள் (DBMS) என்பது தரவுகளை ஒழுங்கான முறையில் சேமித்து, மீட்டெடுத்து, நிர்வகிக்கும் மென்பொருள்."},
+
+    {"id": "DBMS-002", "subject": "dbms", "topic": "er diagram entity relationship", "source": "GFG-DBMS",
+     "text": "An Entity-Relationship (ER) diagram visually represents the entities in a database and the relationships between them. An entity is a real-world object (like Student or Course). A relationship shows how entities are connected (like 'Student enrolls in Course'). Tamil: ER வரைபடம் என்பது தரவுத்தளத்தில் உள்ள பொருட்களையும் (entities) அவற்றுக்கு இடையேயான தொடர்புகளையும் காட்சி வடிவில் காட்டுகிறது."},
+
+    {"id": "DBMS-003", "subject": "dbms", "topic": "normalisation normalization 1NF 2NF 3NF", "source": "GFG-DBMS",
+     "text": "Normalisation is the process of organising a database to reduce data redundancy and improve data integrity. First Normal Form (1NF) ensures each column has atomic (indivisible) values. Second Normal Form (2NF) removes partial dependencies. Third Normal Form (3NF) removes transitive dependencies. Tamil: நார்மலைசேஷன் என்பது தரவுகளின் மீண்டும் மீண்டும் சேமிப்பை குறைக்க அட்டவணைகளை ஒழுங்கமைக்கும் செயல்முறை."},
+
+    {"id": "DBMS-004", "subject": "dbms", "topic": "sql query select insert update delete", "source": "W3S-SQL",
+     "text": "SQL (Structured Query Language) is used to communicate with a relational database. SELECT retrieves rows, INSERT adds new rows, UPDATE modifies existing rows, and DELETE removes rows. Example: SELECT name FROM students WHERE grade = 'A'; returns all student names with grade A. Tamil: SQL என்பது தொடர்புநிலை தரவுத்தளத்துடன் தொடர்பு கொள்ள பயன்படும் மொழி."},
+
+    {"id": "DBMS-005", "subject": "dbms", "topic": "primary key foreign key", "source": "GFG-DBMS",
+     "text": "A Primary Key uniquely identifies each row in a table — no two rows can have the same primary key value, and it cannot be NULL. A Foreign Key is a column in one table that refers to the primary key in another table, creating a link between the two tables. Tamil: Primary Key ஒவ்வொரு வரிசையையும் தனித்துவமாக அடையாளப்படுத்துகிறது. Foreign Key இரண்டு அட்டவணைகளுக்கு இடையே தொடர்பை உருவாக்குகிறது."},
+
+    {"id": "DBMS-006", "subject": "dbms", "topic": "transaction acid properties commit rollback", "source": "GFG-DBMS",
+     "text": "A database transaction is a sequence of operations treated as a single unit. ACID properties ensure reliable transactions: Atomicity (all-or-nothing), Consistency (database stays valid), Isolation (concurrent transactions don't interfere), Durability (committed data persists). COMMIT saves changes; ROLLBACK undoes them. Tamil: ஒரு transaction என்பது ஒரே அலகாக நடத்தப்படும் செயல்களின் தொடர்."},
+
+    {"id": "DBMS-007", "subject": "dbms", "topic": "join inner outer left right", "source": "W3S-SQL",
+     "text": "SQL JOINs combine rows from two tables based on a related column. INNER JOIN returns rows where both tables have matching values. LEFT JOIN returns all rows from the left table plus matching rows from the right. RIGHT JOIN is the opposite. Example: SELECT s.name, c.course FROM students s INNER JOIN courses c ON s.id = c.student_id. Tamil: JOIN என்பது இரண்டு அட்டவணைகளின் வரிசைகளை ஒரு பொதுவான நெடுவரிசையின் அடிப்படையில் இணைக்கும்."},
+
+    {"id": "DBMS-008", "subject": "dbms", "topic": "index indexing", "source": "GFG-DBMS",
+     "text": "A database index is a data structure that speeds up data retrieval on a table at the cost of additional storage. It works like the index of a book — instead of scanning every page, you go directly to the right page. Indexes are created on columns that are frequently used in WHERE clauses. Tamil: Index என்பது தரவுகளை வேகமாக தேட உதவும் ஒரு கட்டமைப்பு, புத்தகத்தின் பொருளடக்கம் போல."},
+
+    {"id": "PY-001", "subject": "python", "topic": "python data types integer float string list tuple dict", "source": "PY-DOCS",
+     "text": "Python has several built-in data types: int (whole numbers like 5), float (decimal numbers like 3.14), str (text like 'hello'), list (ordered mutable/changeable collection like [1,2,3]), tuple (ordered unchangeable collection like (1,2,3)), and dict (key-value pairs like {'name':'Ravi'}). Tamil: Python-ல் int (முழு எண்), float (தசம எண்), str (உரை), list (பட்டியல்), tuple (மாற்ற முடியாத பட்டியல்), dict (சாவி-மதிப்பு ஜோடிகள்) போன்ற தரவு வகைகள் உள்ளன."},
+
+    {"id": "PY-002", "subject": "python", "topic": "python loop for while range", "source": "W3S-PY",
+     "text": "Loops repeat a block of code. A for loop iterates over a sequence: 'for i in range(5): print(i)' prints 0 to 4. A while loop repeats as long as a condition is true: 'while x < 10: x += 1'. Use break to exit a loop early, and continue to skip to the next iteration. Tamil: Loop என்பது ஒரு குறியீட்டு தொகுதியை மீண்டும் மீண்டும் இயக்குகிறது. for loop ஒரு தொடரை கடந்து செல்கிறது; while loop நிபந்தனை உண்மையாக இருக்கும் வரை தொடர்கிறது."},
+
+    {"id": "PY-003", "subject": "python", "topic": "python function def return arguments parameters", "source": "PY-DOCS",
+     "text": "A function is a reusable block of code defined with 'def'. It can accept parameters and return a value. Example: 'def add(a, b): return a + b' defines a function that adds two numbers; 'result = add(3, 4)' calls it and stores 7 in result. Functions avoid repeating code (DRY principle). Tamil: Function என்பது def மூலம் வரையறுக்கப்படும் மீண்டும் பயன்படுத்தக்கூடிய குறியீட்டு தொகுதி."},
+
+    {"id": "PY-004", "subject": "python", "topic": "python oop class object inheritance", "source": "GFG-PY",
+     "text": "Object-Oriented Programming (OOP) in Python uses classes as blueprints for objects. A class defines attributes (data) and methods (functions). 'class Dog: def __init__(self, name): self.name = name' creates a Dog class. Inheritance lets a child class reuse code from a parent class: 'class Labrador(Dog): pass'. Tamil: OOP-ல் class என்பது objects உருவாக்க பயன்படும் வார்ப்புரு. Inheritance மூலம் ஒரு class மற்றொரு class-ன் பண்புகளை பெறலாம்."},
+
+    {"id": "PY-005", "subject": "python", "topic": "python file handling open read write", "source": "PY-DOCS",
+     "text": "Python opens files with the open() function. Modes: 'r' (read), 'w' (write, overwrites), 'a' (append). Always use a 'with' block so the file closes automatically: 'with open(\"data.txt\", \"r\") as f: content = f.read()'. write() writes a string; readlines() reads all lines as a list. Tamil: Python-ல் open() function மூலம் கோப்புகளை திறக்கலாம். 'r' படிக்க, 'w' எழுத, 'a' இணைக்க பயன்படுகிறது."},
+
+    {"id": "PY-006", "subject": "python", "topic": "python exception handling try except finally", "source": "W3S-PY",
+     "text": "Exception handling lets a program respond to errors without crashing. The try block contains code that might fail. The except block handles the error. The finally block always runs, useful for cleanup. Example: 'try: x = int(input()) except ValueError: print(\"Not a number\") finally: print(\"Done\")'. Tamil: try-except மூலம் பிழைகளை நிர்வகிக்கலாம், நிரல் crash ஆவதை தவிர்க்கலாம்."},
+
+    {"id": "PY-007", "subject": "python", "topic": "python list comprehension lambda", "source": "PY-DOCS",
+     "text": "List comprehension creates a new list in one line: '[x*2 for x in range(5)]' gives [0,2,4,6,8]. A lambda is an anonymous one-line function: 'square = lambda x: x**2'. These make code shorter but should not be used when clarity matters more than brevity. Tamil: List comprehension ஒரு வரியில் புதிய பட்டியலை உருவாக்கும். Lambda ஒரு வரி anonymous function."},
+
+    {"id": "JAVA-001", "subject": "java", "topic": "java class object instance constructor", "source": "ORACLE-JT",
+     "text": "Java is an object-oriented language where everything is part of a class. A class is a template; an object is an instance of that template. A constructor is a special method that runs when an object is created: 'public Student(String name) { this.name = name; }'. Objects are created with 'new': 'Student s = new Student(\"Priya\");'. Tamil: Java-ல் class ஒரு வார்ப்புரு; object அந்த வார்ப்புருவின் ஒரு நிகழ்வு. Constructor object உருவாகும்போது இயங்கும்."},
+
+    {"id": "JAVA-002", "subject": "java", "topic": "java inheritance extends super override", "source": "ORACLE-JT",
+     "text": "Inheritance allows a child class to inherit fields and methods from a parent class using 'extends'. The child can override a parent method to give it new behaviour. 'super' calls the parent's constructor or method. Example: 'class Animal { void speak(){} } class Dog extends Animal { void speak(){ System.out.println(\"Woof\"); } }'. Tamil: Inheritance மூலம் ஒரு class மற்றொரு class-ன் பண்புகளை பெறுகிறது. extends keyword பயன்படுத்தப்படுகிறது."},
+
+    {"id": "JAVA-003", "subject": "java", "topic": "java interface abstract implements default static private methods", "source": "ORACLE-JT",
+     "text": "An interface in Java is a contract that a class must follow. It declares abstract methods without implementing them; a class uses 'implements' to provide the implementations. Since Java 8, interfaces can also contain default methods (with a body, using the 'default' keyword) and static methods. Since Java 9, private methods are also allowed. Abstract classes can have both abstract and concrete methods but support only single inheritance. Interfaces support multiple inheritance in Java. Tamil: Interface என்பது ஒரு class கடைப்பிடிக்க வேண்டிய ஒப்பந்தம். Java 8 முதல் default மற்றும் static methods-ஐ interface-ல் சேர்க்கலாம். implements keyword மூலம் ஒரு class interface-ஐ நடைமுறைப்படுத்துகிறது."},
+
+    {"id": "JAVA-004", "subject": "java", "topic": "java exception try catch finally throws", "source": "W3S-JAVA",
+     "text": "Java exception handling uses try-catch-finally. Code that might throw an exception goes in try. Specific exceptions are caught in catch blocks: 'catch (ArithmeticException e)'. finally always runs. Methods that might throw must declare 'throws ExceptionType' in their signature. Checked exceptions must be handled; unchecked exceptions (RuntimeException) need not be. Tamil: try-catch-finally மூலம் Java-ல் பிழை நிர்வாகம் செய்யப்படுகிறது."},
+
+    {"id": "JAVA-005", "subject": "java", "topic": "java array arraylist collections", "source": "W3S-JAVA",
+     "text": "A Java array has a fixed size: 'int[] nums = new int[5]'. ArrayList is a resizable list from java.util: 'ArrayList<String> list = new ArrayList<>()'. ArrayList provides methods like add(), remove(), get() and size(). For key-value storage use HashMap: 'HashMap<String,Integer> map = new HashMap<>()'. Tamil: Java array நிலையான அளவு கொண்டது. ArrayList மாறும் அளவுடன் பட்டியல் வழங்குகிறது."},
+
+    {"id": "JAVA-006", "subject": "java", "topic": "java access modifier public private protected", "source": "GFG-JAVA",
+     "text": "Access modifiers control visibility of class members. public: accessible from anywhere. private: accessible only within the same class (used for encapsulation). protected: accessible within the same package and by subclasses. default (no keyword): accessible within the same package. Good practice: keep fields private and provide public getters/setters. Tamil: Access modifiers class members-ன் அணுகலை கட்டுப்படுத்துகின்றன. private encapsulation-க்கு பயன்படுகிறது."},
+
+    {"id": "DSA-001", "subject": "dsa", "topic": "array data structure index", "source": "GFG-DSA",
+     "text": "An array is a collection of elements stored in contiguous memory locations, all of the same data type. Elements are accessed by index (starting from 0). Searching: O(n) for linear search, O(log n) for binary search on sorted arrays. Insertion and deletion in the middle cost O(n) due to shifting. Tamil: Array என்பது ஒரே வகையான உறுப்புகளை தொடர்ச்சியான நினைவக இடங்களில் சேமிக்கும் கட்டமைப்பு. Index 0-ல் இருந்து தொடங்குகிறது."},
+
+    {"id": "DSA-002", "subject": "dsa", "topic": "linked list node pointer singly doubly", "source": "GFG-DSA",
+     "text": "A linked list is a chain of nodes where each node holds data and a pointer to the next node. Unlike arrays, nodes are not stored in contiguous memory. Singly linked lists have one pointer (next); doubly linked lists have two (next and prev). Insertion and deletion at the head cost O(1); searching costs O(n). Tamil: Linked list என்பது data மற்றும் அடுத்த node-க்கு pointer கொண்ட nodes-ன் சங்கிலி."},
+
+    {"id": "DSA-003", "subject": "dsa", "topic": "stack push pop LIFO", "source": "GFG-DSA",
+     "text": "A stack is a Last-In-First-Out (LIFO) data structure. The last element added is the first to be removed. Operations: push (add to top), pop (remove from top), peek (view top without removing). Stacks are used in function call management, undo operations and expression evaluation. Tamil: Stack என்பது LIFO அமைப்பு — கடைசியாக சேர்க்கப்படுவது முதலில் அகற்றப்படும். Function calls-ல் stack பயன்படுகிறது."},
+
+    {"id": "DSA-004", "subject": "dsa", "topic": "queue enqueue dequeue FIFO", "source": "GFG-DSA",
+     "text": "A queue is a First-In-First-Out (FIFO) data structure. The first element added is the first removed. Operations: enqueue (add to rear), dequeue (remove from front). Queues are used in BFS graph traversal, CPU scheduling, and printer spooling. A circular queue reuses empty spaces at the front. Tamil: Queue என்பது FIFO அமைப்பு — முதலில் சேர்க்கப்படுவது முதலில் வெளியேறும். BFS மற்றும் CPU scheduling-ல் பயன்படுகிறது."},
+
+    {"id": "DSA-005", "subject": "dsa", "topic": "binary tree node root leaf height", "source": "GFG-DSA",
+     "text": "A binary tree is a hierarchical data structure where each node has at most two children: left and right. The topmost node is the root. Nodes with no children are leaves. Height is the number of edges on the longest path from root to a leaf. Binary Search Tree (BST): left child < parent < right child, enabling O(log n) search. Tamil: Binary tree ஒரு படிநிலை கட்டமைப்பு. ஒவ்வொரு node-க்கும் அதிகபட்சம் இரண்டு குழந்தைகள் உள்ளனர். BST-ல் இடது < தாய் < வலது."},
+
+    {"id": "DSA-006", "subject": "dsa", "topic": "sorting bubble selection insertion merge quick time complexity", "source": "GFG-DSA",
+     "text": "Sorting arranges elements in order. Bubble Sort (O(n²)): repeatedly swap adjacent elements if out of order — simple but slow. Selection Sort (O(n²)): find the minimum and place it at the front. Merge Sort (O(n log n)): divide, sort halves, merge — efficient. Quick Sort (O(n log n) average): pick a pivot, partition around it. Use merge sort for guaranteed O(n log n); quick sort for practical speed. Tamil: Sorting என்பது உறுப்புகளை வரிசைப்படுத்துதல். Merge Sort O(n log n) செயல்திறன் உறுதியாக தருகிறது."},
+
+    {"id": "DSA-007", "subject": "dsa", "topic": "big O time complexity space complexity", "source": "GFG-DSA",
+     "text": "Big-O notation describes how an algorithm's time or space grows with input size n. O(1): constant — same time regardless of n. O(log n): logarithmic — binary search. O(n): linear — simple loop. O(n log n): merge sort. O(n²): quadratic — nested loops. Always aim for the lowest complexity you can achieve for the problem. Tamil: Big-O notation ஒரு algorithm n input-க்கு எவ்வளவு நேரம் அல்லது இடம் எடுக்கும் என்பதை விவரிக்கிறது."},
+
+    {"id": "OS-001", "subject": "os", "topic": "operating system process thread", "source": "GFG-OS",
+     "text": "An operating system (OS) manages hardware and software resources. A process is a program in execution — it has its own memory space. A thread is a lightweight unit of execution within a process; threads share the process's memory. Multi-threading improves performance on multi-core CPUs. Tamil: Operating System வன்பொருள் மற்றும் மென்பொருள் வளங்களை நிர்வகிக்கிறது. Process இயங்கும் நிரல்; Thread அந்த நிரலுக்குள் சிறு செயல்பாட்டு அலகு."},
+
+    {"id": "OS-002", "subject": "os", "topic": "cpu scheduling FCFS SJF round robin priority", "source": "GFG-OS",
+     "text": "CPU scheduling decides which process runs next. FCFS (First Come First Served): simple, no starvation but long wait times. SJF (Shortest Job First): minimises average waiting time but requires knowing burst time. Round Robin: each process gets a fixed time slice (quantum) — fair for time-sharing. Priority Scheduling: highest priority runs first — low-priority processes can starve. Tamil: CPU scheduling எந்த process அடுத்து இயங்கும் என தீர்மானிக்கிறது. Round Robin நேர-பகிர்வுக்கு சரியானது."},
+
+    {"id": "OS-003", "subject": "os", "topic": "memory management paging segmentation virtual memory", "source": "GFG-OS",
+     "text": "Memory management allocates RAM to processes. Paging divides memory into fixed-size pages; logical addresses map to physical frames via a page table. Segmentation divides memory by logical sections (code, data, stack). Virtual memory allows a process to use more memory than physically available by swapping pages to disk. A page fault occurs when a required page is not in RAM. Tamil: Paging நினைவகத்தை சம அளவு பக்கங்களாக பிரிக்கிறது. Virtual memory RAM-ஐ விட அதிக இடத்தை பயன்படுத்த அனுமதிக்கிறது."},
+
+    {"id": "OS-004", "subject": "os", "topic": "deadlock prevention detection avoidance", "source": "GFG-OS",
+     "text": "A deadlock occurs when two or more processes each hold a resource and wait for a resource held by another, creating a circular wait. Four conditions for deadlock: mutual exclusion, hold-and-wait, no preemption, circular wait. Prevention: break one condition. Detection: use a resource allocation graph. Banker's Algorithm avoids deadlock by checking safe states. Tamil: Deadlock என்பது processes ஒன்றுக்கொன்று காத்திருக்கும் நிலை. Banker's Algorithm பாதுகாப்பான நிலைகளை சரிபார்க்கிறது."},
+
+    {"id": "OS-005", "subject": "os", "topic": "file system directory inode FAT", "source": "GFG-OS",
+     "text": "A file system organises data on storage devices. A directory (folder) maps file names to their locations. In Unix/Linux, an inode stores file metadata (size, permissions, owner) and pointers to data blocks. FAT (File Allocation Table) is used in older Windows systems. Operations: create, read, write, delete, open, close. Tamil: File system சேமிப்பக சாதனத்தில் தரவுகளை ஒழுங்கமைக்கிறது. inode கோப்பின் metadata-வை சேமிக்கிறது."},
+
+    {"id": "CN-001", "subject": "cn", "topic": "OSI model layers physical datalink network transport session presentation application", "source": "GFG-CN",
+     "text": "The OSI model describes network communication in 7 layers: (1) Physical — bits over cable/wireless; (2) Data Link — frames, MAC addresses; (3) Network — IP addressing, routing; (4) Transport — TCP/UDP, end-to-end delivery; (5) Session — manages sessions; (6) Presentation — encryption, encoding; (7) Application — HTTP, FTP, user-facing protocols. Remember: 'Please Do Not Throw Sausage Pizza Away'. Tamil: OSI model நெட்வொர்க் தொடர்பை 7 அடுக்குகளாக விவரிக்கிறது. Physical முதல் Application வரை."},
+
+    {"id": "CN-002", "subject": "cn", "topic": "TCP IP protocol suite", "source": "GFG-CN",
+     "text": "TCP/IP is the foundational protocol suite of the internet. TCP (Transmission Control Protocol) is connection-oriented — it guarantees reliable, ordered delivery using acknowledgements. IP (Internet Protocol) handles addressing and routing. UDP (User Datagram Protocol) is connectionless and faster but does not guarantee delivery — used for video streaming and DNS. Tamil: TCP நம்பகமான, வரிசைப்படுத்தப்பட்ட delivery-ஐ உறுதி செய்கிறது. UDP வேகமானது ஆனால் delivery உறுதியில்லை."},
+
+    {"id": "CN-003", "subject": "cn", "topic": "IP address IPv4 IPv6 subnet", "source": "GFG-CN",
+     "text": "An IP address uniquely identifies a device on a network. IPv4 uses 32 bits (e.g. 192.168.1.1) giving ~4.3 billion addresses. IPv6 uses 128 bits to support far more devices. A subnet divides a network into smaller segments; the subnet mask (e.g. 255.255.255.0) determines which part is the network and which is the host. Tamil: IP address நெட்வொர்க்கில் ஒவ்வொரு சாதனத்தையும் தனித்துவமாக அடையாளப்படுத்துகிறது."},
+
+    {"id": "CN-004", "subject": "cn", "topic": "HTTP HTTPS DNS URL web protocol", "source": "MDN-HTTP",
+     "text": "HTTP (HyperText Transfer Protocol) is the protocol browsers use to communicate with web servers. A client sends a request (GET, POST, PUT, DELETE); the server responds with a status code (200 OK, 404 Not Found, 500 Server Error) and a body. HTTPS adds TLS encryption. DNS (Domain Name System) translates domain names (google.com) to IP addresses. Tamil: HTTP browser மற்றும் web server தொடர்பு கொள்ள பயன்படுத்தும் protocol. HTTPS குறியாக்கம் சேர்க்கிறது."},
+
+    {"id": "CN-005", "subject": "cn", "topic": "routing router switch hub topology", "source": "GFG-CN",
+     "text": "A router connects different networks and forwards packets based on IP addresses. A switch connects devices within the same network using MAC addresses. A hub broadcasts to all devices (inefficient). Network topologies: Bus (one cable, all connected), Star (central switch), Ring (circular), Mesh (every device connected to every other). Tamil: Router வெவ்வேறு networks-ஐ இணைக்கிறது. Switch ஒரே network-ல் devices-ஐ இணைக்கிறது."},
+
+    {"id": "CN-006", "subject": "cn", "topic": "socket port TCP handshake three-way", "source": "GFG-CN",
+     "text": "A socket is an endpoint for network communication identified by IP address and port number. TCP uses a three-way handshake to establish a connection: SYN (client requests), SYN-ACK (server acknowledges), ACK (client confirms). Well-known ports: HTTP=80, HTTPS=443, FTP=21, SSH=22. Tamil: Socket ஒரு நெட்வொர்க் தொடர்பு இறுதிப்புள்ளி. TCP இணைப்பை ஏற்படுத்த three-way handshake பயன்படுகிறது."},
+
+    {"id": "AI-001", "subject": "ai", "topic": "artificial intelligence machine learning definition", "source": "GFG-AI",
+     "text": "Artificial Intelligence (AI) is the simulation of human intelligence by machines — enabling them to learn, reason and solve problems. Machine Learning (ML) is a subset of AI where systems learn patterns from data without being explicitly programmed. Deep Learning is a subset of ML using neural networks with many layers. Tamil: AI என்பது மனித அறிவை இயந்திரங்களில் உருவகிக்கும் தொழில்நுட்பம். ML என்பது data-ல் இருந்து pattern கற்கும் AI-ன் துணைப்பிரிவு."},
+
+    {"id": "AI-002", "subject": "ai", "topic": "search algorithm BFS DFS uniform cost A-star", "source": "GFG-AI",
+     "text": "Search algorithms find a path from a start state to a goal state. BFS (Breadth-First Search) explores level by level — finds the shortest path in unweighted graphs. DFS (Depth-First Search) goes deep first — uses less memory. Uniform Cost Search uses path cost. A* Search uses f(n) = g(n) + h(n) where g is cost so far and h is heuristic — finds the optimal path efficiently. Tamil: BFS அகல முதல் தேடல்; DFS ஆழ முதல் தேடல். A* சரியான பாதையை திறம்பட கண்டுபிடிக்கிறது."},
+
+    {"id": "AI-003", "subject": "ai", "topic": "supervised unsupervised learning classification regression clustering", "source": "GFG-AI",
+     "text": "Supervised learning trains a model on labelled data (input-output pairs). Classification predicts a category (spam/not spam). Regression predicts a continuous value (house price). Unsupervised learning finds patterns in unlabelled data. Clustering groups similar data points (e.g. K-Means). Reinforcement learning learns by reward and penalty through interaction with an environment. Tamil: Supervised learning label செய்யப்பட்ட data-வில் பயிற்சி பெறுகிறது. Unsupervised learning label இல்லாத data-வில் pattern கண்டுபிடிக்கிறது."},
+
+    {"id": "AI-004", "subject": "ai", "topic": "neural network activation function layers", "source": "GFG-AI",
+     "text": "A neural network consists of layers of nodes (neurons): an input layer, one or more hidden layers, and an output layer. Each connection has a weight. An activation function (ReLU, Sigmoid, Softmax) decides whether a neuron fires. Training adjusts weights using backpropagation and gradient descent to minimise a loss function. Tamil: Neural network neurons-ன் அடுக்குகளால் ஆனது. Backpropagation மற்றும் gradient descent மூலம் பயிற்சி பெறுகிறது."},
+
+    {"id": "AI-005", "subject": "ai", "topic": "knowledge representation propositional logic predicate", "source": "GFG-AI",
+     "text": "Knowledge representation is how AI stores facts and rules. Propositional logic uses statements that are true or false connected by AND, OR, NOT. Predicate logic (first-order logic) adds variables and quantifiers (∀ all, ∃ exists), allowing more expressive statements. Expert systems use rule-based knowledge bases with if-then rules. Tamil: Knowledge representation AI கோட்பாடுகளையும் விதிகளையும் சேமிக்கும் முறை. முன்மொழி தர்க்கம் (propositional logic) உண்மை/பொய் கூற்றுகளை பயன்படுத்துகிறது."},
+
+    {"id": "AI-006", "subject": "ai", "topic": "decision tree random forest overfitting", "source": "GFG-AI",
+     "text": "A decision tree is a flowchart-like model where each internal node tests a feature, branches represent outcomes, and leaves give predictions. Easy to interpret but prone to overfitting (memorising training data). Random Forest combines many decision trees trained on random subsets — reduces overfitting and improves accuracy. Overfitting: model performs well on training data but poorly on new data. Tamil: Decision tree ஒரு flow chart போன்ற model. Random Forest பல decision trees-ஐ இணைத்து overfitting-ஐ குறைக்கிறது."}
+
+  ]
+}

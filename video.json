@@ -1,0 +1,26 @@
+{
+  "title": "ArivuBridge \u2013 Tamil AI Learning Companion",
+  "subtitle": "Helping Tamil-medium engineering students understand computer science in their own language",
+  "tags": ["#strands-agents", "#social-good", "#education"],
+  "closing": "Learn in your language. Understand with confidence.",
+  "scenes": [
+    {
+      "title": "Explaining DBMS in Tamil",
+      "caption": "A Tamil-medium student asks about DBMS. ArivuBridge explains using curated learning guidance.",
+      "input": "DBMS \u0b8e\u0ba9\u0bcd\u0bb1\u0bbe\u0bb2\u0bcd \u0b8e\u0ba9\u0bcd\u0ba9?",
+      "command": "python -m agent.app \"DBMS \u0b8e\u0ba9\u0bcd\u0bb1\u0bbe\u0bb2\u0bcd \u0b8e\u0ba9\u0bcd\u0ba9?\" --lang ta"
+    },
+    {
+      "title": "Crisis message handled safely",
+      "caption": "The pre-check safety hook intercepts a distress message before the learning agent runs and returns a fixed support response.",
+      "input": "I want to end my life, college is too hard.",
+      "command": "python -m agent.app \"I want to end my life, college is too hard.\" --lang en"
+    },
+    {
+      "title": "Out-of-scope request",
+      "caption": "ArivuBridge identifies an unsupported subject and guides the student toward its supported computer science topics.",
+      "input": "Can you help me with my organic chemistry assignment?",
+      "command": "python -m agent.app \"Can you help me with my organic chemistry assignment?\" --lang en"
+    }
+  ]
+}
